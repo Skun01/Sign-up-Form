@@ -66,6 +66,37 @@
                 <p class="switch-page">Already have an account? <a href="#" class="switch-link">Log in</a></p>
             </div>
         </form>
+        <script src="./assets/validation.js"></script>
+        <script>
+            validation.objectSet= [
+                {
+                    selector: '#first-name',
+                    rules: ['required']
+                },
+                {
+                    selector: '#last-name', 
+                    rules: ['required']
+                },
+                {
+                    selector: '#email', 
+                    rules: ['required', 'checkEmail']
+                },
+                {
+                    selector: '#phone-number', 
+                    rules: ['required', 'checkPhoneNumber']
+                },
+                {
+                    selector: '#password',
+                    rules: ['required', 'checkPassword']
+                },
+                {
+                    selector: '#password-confirm',
+                    selectorCheck: '#password',
+                    rules: ['required', 'confirmPassword']
+                }
+
+            ]
+        </script>
     </div>
 </body>
 </html>
