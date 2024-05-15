@@ -14,8 +14,8 @@ html{
 :root{
     --font-color: black;
     --theme: white;
-    --form-theme: #ccc;
-    --border-color: rgba(0, 0, 0.5);
+    --form-theme: #f9fafb;
+    --border-color: #999a9c91;
 }
 
 :root.black{
@@ -49,17 +49,19 @@ body{
     flex: 2;
     color: var(--font-color);
     background-color: var(--theme);
-    padding-left: 50px;
 }
 
 .form{
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .header-form{
-    padding: 50px 0;
+    padding: 30px 0;
     flex: 1;
+    background-color: var(--form-theme);
+    padding-left: 50px;
 }
 .desc{
     margin: 10px 0;
@@ -73,6 +75,7 @@ body{
     display: flex;
     flex-direction: column;
     flex: 3;
+    padding-left: 50px;
 }
 
 .row{
@@ -110,4 +113,35 @@ body{
     font-size: 14px;
     color: red;
     font-weight: 200;
+}
+
+.send-infor-section{
+    padding-left: 50px;
+    background-color: var(--form-theme);
+    padding: 30px 0 30px 50px;
+    box-shadow: 0 2px 3px var(--border-color) inset;
+}
+
+.btn{
+    padding: 10px 20px;
+    background-color: #596d48;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.btn:hover{
+    box-shadow: 2px 2px 3px var(--border-color);
+}
+.btn:active{
+    opacity: 0.6;
+}
+.switch-link{
+    text-decoration: none;
+    color: #596d48;
+}
+.switch-link:hover{
+    text-decoration: underline;
 }
