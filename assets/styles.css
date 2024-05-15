@@ -14,6 +14,8 @@ html{
 :root{
     --font-color: black;
     --theme: white;
+    --form-theme: #ccc;
+    --border-color: rgba(0, 0, 0.5);
 }
 
 :root.black{
@@ -47,14 +49,17 @@ body{
     flex: 2;
     color: var(--font-color);
     background-color: var(--theme);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding-left: 50px;
 }
 
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
 .header-form{
-    height: 180px;
+    padding: 50px 0;
+    flex: 1;
 }
 .desc{
     margin: 10px 0;
@@ -62,4 +67,47 @@ body{
 .author-message{
     margin-top: 30px;
     font-style: italic;
+}
+
+.take-input-infor{
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+}
+
+.row{
+    padding: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+.col{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.col label{
+    text-transform: uppercase ;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+}
+
+.col input{
+    outline: none;
+    border: 1px solid var(--border-color);
+    width: 50%;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+.col input:focus{
+    border-color: rgb(35, 35, 233);
+    box-shadow: 2px 2px 3px var(--border-color);
+}
+
+.form-message{
+    font-size: 14px;
+    color: red;
+    font-weight: 200;
 }
