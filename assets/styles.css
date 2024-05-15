@@ -45,4 +45,21 @@ body{
 
 .sign-up-section{
     flex: 2;
+    color: var(--font-color);
+    background-color: var(--theme);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+.header-form{
+    height: 180px;
+}
+.desc{
+    margin: 10px 0;
+}
+.author-message{
+    margin-top: 30px;
+    font-style: italic;
 }
