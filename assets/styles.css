@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
 
 /* reset css */
+
+html{
+    font-family: 'Freeman';
+}
 *{
     margin: 0;
     padding: 0;
@@ -19,12 +23,24 @@
 
 body{
     display: flex;
+    color: var(--font-color);
 }
 
 .picture-section{
     background-image: url('../assets/img/simon-lee-N1_C_tiLIoA-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     flex: 1;
     height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+.copyright{
+    color: white;
+    margin-top: 90vh;;
+    font-weight: bold;
+    text-shadow: 0 0 5px 5px black;
 }
 
 .sign-up-section{
