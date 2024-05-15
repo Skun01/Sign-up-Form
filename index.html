@@ -16,7 +16,7 @@
 
         </div>
 
-        <form action="" class = 'form'>
+        <form action="" id = 'form-1'>
             <div class="header-form">
                 <h1 class="title">Let make an account!</h1>
                 <p class="desc">but this is not an online service, i just want to practice to make a complete form</p>
@@ -33,19 +33,19 @@
                     <div class="col last-name">
                         <label for="last-name">last name</label>
                         <input type="text" id="last-name">
-                        <p class="form-message"> &nbsp;</p>
+                        <p class="form-message"></p>
                     </div>
                 </div>
                 <div class="row contact-section">
                     <div class="col email">
                         <label for="email">email</label>
                         <input type="email" id="email">
-                        <p class="form-message"> </p>
+                        <p class="form-message"></p>
                     </div>
                     <div class="col phone-number">
                         <label for="phone-number">phone number</label>
                         <input type="text" id="phone-number">
-                        <p class="form-message"> </p>
+                        <p class="form-message"></p>
                     </div>
                 </div>
                 <div class="row password-section">
@@ -68,7 +68,7 @@
         </form>
         <script src="./assets/validation.js"></script>
         <script>
-            validation.objectSet= [
+            validation('#form-1', '.form-message', [
                 {
                     selector: '#first-name',
                     rules: ['required']
@@ -94,9 +94,9 @@
                     selectorCheck: '#password',
                     rules: ['required', 'confirmPassword']
                 }
-
-            ]
+            ]);
         </script>
+
     </div>
 </body>
 </html>
