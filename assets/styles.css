@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+
+/* reset css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-color: black;
+    --theme: white;
+}
+
+:root.black{
+    --font-color: white;
+    --theme: black;
+}
+
+body{
+    display: flex;
+}
+
+.picture-section{
+    background-image: url('../assets/img/simon-lee-N1_C_tiLIoA-unsplash.jpg');
+    flex: 1;
+    height: 100vh;
+}
+
+.sign-up-section{
+    flex: 2;
+}
