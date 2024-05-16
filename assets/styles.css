@@ -106,7 +106,7 @@ body{
 }
 
 .invalid{
-    border-color: red;
+    border-color: red !important;
 }
 .col input:focus{
     border-color: rgb(35, 35, 233);

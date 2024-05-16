@@ -87,26 +87,27 @@
                     {
                         inputSelector: '#email',
                         rules:[
-                            validator.isEmail(this.inputElement)
+                            validator.isEmail()
                         ]
                     },
                     {
                         inputSelector: '#phone-number',
                         rules:[
-                            validator.isPhoneNumber(this.inputElement)
+                            validator.isPhoneNumber()
                         ]
                     },
                     {
                         inputSelector: '#password',
                         rules:[
-                            validator.checkPasswordLength(this.inputElement, 6),
-                            validator.checkPasswordSecure(this.inputElement)
+                            validator.required(),
+                            validator.checkPasswordLength(6),
+                            validator.checkPasswordSecure()
                         ]
                     },
                     {
                         inputSelector: '#password-confirm',
                         rules:[
-                            validator.confirmPassword(this.inputElement, '#password')
+                            validator.confirmPassword('#password')
                         ]
                     }
                 ]
