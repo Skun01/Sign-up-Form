@@ -68,33 +68,49 @@
         </form>
         <script src="./assets/validation.js"></script>
         <script>
-            validation('#form-1', '.form-message', [
-                {
-                    selector: '#first-name',
-                    rules: ['required']
-                },
-                {
-                    selector: '#last-name', 
-                    rules: ['required']
-                },
-                {
-                    selector: '#email', 
-                    rules: ['required', 'checkEmail']
-                },
-                {
-                    selector: '#phone-number', 
-                    rules: ['required', 'checkPhoneNumber']
-                },
-                {
-                    selector: '#password',
-                    rules: ['required', 'checkPassword']
-                },
-                {
-                    selector: '#password-confirm',
-                    selectorCheck: '#password',
-                    rules: ['required', 'confirmPassword']
-                }
-            ]);
+            validator({
+                formSelector: '#form-1',
+                errorSelector: '.form-message',
+                setRules: [
+                    {
+                        inputSelector: '#first-name',
+                        rules: [
+                            validator.required(this.inputElement, 'Please enter your first name')
+                        ]
+                    },
+                    {
+                        inputSelector: '#last-name',
+                        rules:[
+                            validator.required(this.inputElement, 'Please enter your last name')
+                        ]
+                    },
+                    {
+                        inputSelector: '#email',
+                        rules:[
+                            validator.isEmail(this.inputElement)
+                        ]
+                    },
+                    {
+                        inputSelector: '#phone-number',
+                        rules:[
+                            validator.isPhoneNumber(this.inputElement)
+                        ]
+                    },
+                    {
+                        inputSelector: '#password',
+                        rules:[
+                            validator.checkPasswordLength(this.inputElement, 6),
+                            validator.checkPasswordSecure(this.inputElement)
+                        ]
+                    },
+                    {
+                        inputSelector: '#password-confirm',
+                        rules:[
+                            validator.confirmPassword(this.inputElement, '#password')
+                        ]
+                    }
+                ]
+            });
         </script>
 
     </div>
